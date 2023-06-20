@@ -19,9 +19,17 @@ ul,li{
     padding: 0;
 }
 
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
 .container{
-    width: 1158px;
-    padding: 0 15px;
+    /* width: 1158px; */
+    max-width: 426px;
+    padding: 0 16px;
     margin: 0 auto;
     /* outline: 2px solid red; */
 }
@@ -99,19 +107,16 @@ body{
 }
 
 .nav-list-flex{
-    display: flex;
-    gap: 40px;
+    /* display: flex;
+    gap: 40px; */
+    display: none;
 }
 
 .address-flex{
-    margin-left: auto;
+    display: none;
+    /* margin-left: auto; */
 }
 
-.address-flex-list{
-    display: flex;
-    gap: 40px;
-    
-}
 
 
 
@@ -174,7 +179,7 @@ body{
 
     color: var(--main-text-color);
 
-    padding: 24px 0;
+    
     display: block;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -185,33 +190,187 @@ body{
     color: var(--hover-color);
 }
 
-/*--------------------------- main page ----------------------------*/
-.main-page{
-    /* width: 1440px;
-    height: 600px;
-    left: 0px;
-    top: 72px;
-    text-align: center; */
+.burger-btn {
+   
+    width: 32px;
+    height: 22px;
+    padding: 0;
 
-    background-color:  var(--main-color-dark);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 188px 0;
-    max-width: 1440px;
-    margin: 0 auto;
+    margin-left: auto;
+    /* margin-top: 24px;
+    margin-bottom: 24px; */
 
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+}
+
+.burger-svg {
+    stroke: var(--main-color-dark);
+}
+
+.mob-menu {
+    position: fixed;
+    top:0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px;
+
+    transform: translateX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.mob-menu.is-open {
+    transform: translateX(100%);
+}
+
+.mob-close-btn {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+
+    color: var(--main-color-dark);
+    border-radius: 50%;
+    background: var(--border-menu-btn);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+
+    position: absolute;
+    right: 24px;
+    top: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
+.mob-nav-flex {}
+
+.mob-nav-list-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mob-nav-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    color: var(--main-color-dark);
+}
+
+.mob-nav-link.current{
+    color: var(--hover-color);
+}
+
+.tel{
+    color: var(--logo-web-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+
+    margin-bottom: 40px;
+    display: block;
+}
+
+@media screen and (max-width: 427px){
+    .tel{
+        font-size: 25px;
+    }
+}
+
+.mob-address-flex {}
+
+.mob-address-flex-list {}
+
+.mob-address-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    color: var(--main-text-color);
+
+    display: block;
+    margin-bottom: 48px;
+}
+
+
+.mob-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.mob-soc-item {
+    width: 40px;
+    height: 40px;
+}
+
+.mob-soc-link {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--logo-web-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+}
+
+
+
+/*--------------------------- main page ----------------------------*/
+.main-page{
+
+    background-color:  var(--main-color-dark);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-mob.jpg);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* padding: 188px 0; */
+    padding: 112px 0;
+    max-width: 1440px;
+    /* max-width: 426px; */
+    margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .main-page{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-mob-2x.jpg);
+    }
+}
+
+
 .main-title{
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
+    /* font-size: 56px; */
+    font-size: 36px;
+    /* line-height: 1.07; */
+    line-height: 1.11;
 
     text-align: center;
     letter-spacing: 0.02em;
@@ -219,10 +378,13 @@ body{
     color: var(--main-color);
 
     margin:0 auto;
-    margin-bottom: 48px;
+    /* margin-bottom: 48px; */
+    margin-bottom: 72px;
     
 
-    max-width: 496px;
+    /* max-width: 496px; */
+    max-width: 320px;
+
 
 
     
@@ -277,7 +439,8 @@ body{
   }
 /* ------------------------MODAL----------------- */
 .modal{
-    width: 408px;
+    max-width: 392px;
+    width: 100%;
     min-height: 584px;
     background-color: var(--modal-color);
     box-sizing: border-box;
@@ -292,6 +455,8 @@ body{
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
     padding: 72px 24px 24px;
+
+  
 
 }
 .close-btn {
@@ -369,7 +534,8 @@ body{
 }
 
 .modal-input {
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     height: 40px;
 
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -407,7 +573,8 @@ body{
 }
 
 .modal-comment{
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     height: 120px;
 
     
@@ -518,7 +685,8 @@ body{
 
 /* -------------properities--------------------- */
 .prop-page{
-    padding: 120px 0;
+    /* padding: 120px 0; */
+    padding: 96px 0;
 }
 
 .visually-hidden {
@@ -532,45 +700,52 @@ body{
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+    visibility: hidden
 }
 
 
 .prop-flex{
     display: flex;
-    gap: 24px; 
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .prop-item{
-    width: calc((100% - 72px) / 4);
-    /* display: flex;
-    flex-direction: column; */
-}
-/* .prop-list-flex{
+    /* width: 100%; */
+    /* width: calc((100% - 72px) / 4); */
+
+    
     display: flex;
-    flex-direction: column;
-} */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .prop-icon-container{
-    width: 264px;
+    width: 396px;
     height: 112px;
     background-color: var(--second-main-color);
     border-radius: 4px;
 
 
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     justify-content: center;
 
     margin-bottom: 8px;
 }
-/* .prop-icon{
-    width: 64px;
-    height: 64px;
-} */
+
 
 .prop-heading{
-    font-weight: 500;
+    /* font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 1.2; */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+     
    
     letter-spacing: 0.02em;
     color: var(--main-color-dark);
@@ -579,13 +754,16 @@ body{
 
     margin-bottom: 8px;
 
-    /* padding-top: 120px; */
 }
 
 .prop-p{
-    font-weight: 400;
+    /* font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5; */
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+      
 
     letter-spacing: 0.02em;
 
@@ -596,48 +774,30 @@ body{
 
 /* ------------what we are doing----------- */
 .occupation-page{
-    padding-bottom: 120px;
+    display: none;
 }
 
 
-.occupation-heading{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
+/*-----------------------Our team-----------------  */
 
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--main-color-dark);
-
-    margin-bottom: 72px;
+.team-page>.container,
+.footer>.container,
+.customers-page>.container{
+    max-width: 296px;
 }
-
-img{
-    display: block;
-}
-
-.occup-img{
-    width: calc((100% - 48px)/3);
-}
-
-.occup-list-flex{
-    display: flex;
-    gap: 24px;
-}
-
-/*-----------Our team-----------------  */
 
 
 .team-page{
     background-color: var(--second-main-color);
 
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 .team-flex{
     display: flex;
-    gap:24px;
+    flex-wrap: wrap;
+    /* gap:24px; */
+    gap:72px;
 }
 
 
@@ -659,7 +819,8 @@ img{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 
-    width: calc((100% - 72px) / 4);
+    /* width: calc((100% - 72px) / 4); */
+    width: 100%;
 }
 
 .card-info{
@@ -730,7 +891,7 @@ img{
 }
 /* --------------------------------Customers--------------------- */
 .customers-page {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 .customers-header {
     font-size: 36px;
@@ -745,10 +906,11 @@ img{
 
 .company-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 24px;
-
+    /* gap: 24px; */
+    gap: 16px;
 
 }
 
@@ -787,29 +949,39 @@ img{
 
 /* ----------footer page----------- */
 .footer{
-    /* width: 1440px;
-    height: 312px;
-    left: 0px;
-    top: 2280px; */
-
     background: var(--main-color-dark);
-    padding: 100px 0;
+    padding: 96px 0;
+}
+
+.footer-container{
+    /* display: flex;
+    align-items: baseline; */
+
+}
+
+.footer-logo-p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 72px;
+    /* margin-right: 120px; */
 }
 
 .footer-logo{
     display: inline-block;
     margin-bottom: 16px;
     margin-right: 0;
-
+    
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     line-height: 1.17;
-
+    
     color: var(--logo-web-color);
-
+    
 }
 
 .footer-logo-color{
@@ -829,15 +1001,7 @@ img{
     color: var(--second-main-color);
 }
 
-.footer-container{
-    display: flex;
-    align-items: baseline;
-    /* gap: 120px; */
-}
 
-.footer-logo-p{
-    margin-right: 120px;
-}
 
 .footer-soc-p {
     font-weight: 500;
@@ -883,14 +1047,18 @@ img{
 }
 
 .footer-form-wrap{
-    margin-left: 80px;
+    /* margin-left: 80px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
-.footer-form {
+/* .footer-form {
     display: flex;
     gap: 24px;
     
-}
+} */
 
 .footer-p-input{
     font-weight: 500;
@@ -1131,3 +1299,228 @@ margin: -1px;
 
     color: var(--main-text-color);
 }
+
+@media screen  and (min-width: 768px){
+    .container{
+        max-width: 766px;
+    }
+    /* --------------NAVIGATION---------------- */
+    .nav-list-flex {
+        display: flex;
+        gap: 40px;
+    }
+
+    .address-flex {
+        display: block;
+        margin-left: auto;
+    }
+
+
+    .address-flex-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .address{
+        padding: 16px 0;
+    }
+    
+    .burger-btn{
+        display: none;
+    }
+
+    .mob-menu{
+        display: none;
+    }
+
+    /* ---------------MAIN PAGE------------- */
+    .main-page{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-tab.jpg);
+    }
+
+    
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .main-page {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-tab-2x.jpg);
+        }
+    }
+
+    .main-title{
+        max-width: 496px;
+        font-size: 56px;
+        line-height: 1.07;
+        margin-bottom: 36px;
+    }
+
+    .modal{
+        max-width: 408px;
+    }
+
+
+    /* ---------------------PROPERITIES----------------------- */
+    .prop-item{
+        width: calc((100% - 24px) / 2);
+        justify-content: start;
+    }
+    .prop-flex{
+        gap: 72px 24px;
+    }
+    .prop-icon-container{
+        width: 356px;
+    }
+
+
+    /* -------------------TEAM PAGE---------------- */
+    .team-page>.container,
+    .footer>.container,
+    .customers-page>.container {
+        max-width: 584px;
+    }
+
+    .team-flex {
+        gap: 72px 24px;
+    }
+
+    .card{
+        width: calc((100% - 24px) / 2);
+    }
+    /* ------------------CUSTOMERS-------------------- */
+    .company-list {
+        gap: 72px 24px;
+    }
+   
+    
+}
+
+@media screen  and (min-width: 1158px){
+    .container{
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+
+    .address-flex-list {
+        display: flex;
+        gap: 40px;
+
+    }
+
+    .address-link{
+        padding: 24px 0;
+    }
+
+    /* ---------------MAIN PAGE------------- */
+    .main-page {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .main-page {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-2x.jpg);
+        }
+    }
+
+    .main-page{
+        padding: 188px 0;
+    }
+    .main-title{
+        max-width: 496px;
+        font-size: 56px;
+        line-height: 1.07;
+        margin-bottom: 48px;
+    }
+
+    /* ---------------------PROPERITIES----------------------- */
+    .prop-page{
+        padding: 120px 0;;
+    }
+    .prop-item {
+        width: calc((100% - 72px) / 4);
+        justify-content: none;
+    }
+
+    .prop-flex {
+        gap:24px;
+    }
+
+    .prop-icon-container{
+        width: 264px;
+        display: flex;
+    }
+
+    .prop-heading{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .prop-p{
+        font-weight: 400;
+    }
+
+     /*-----------WHAT WE ARE DOING---------------------  */
+    .occupation-page {
+        padding-bottom: 120px;
+        display: block;
+    }
+
+
+    .occupation-heading {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: var(--main-color-dark);
+
+        margin-bottom: 72px;
+    }
+
+
+
+    .occup-img {
+        width: calc((100% - 48px)/3);
+    }
+
+    .occup-list-flex {
+        display: flex;
+        gap: 24px;
+    }
+            
+    
+    /* -------------------TEAM PAGE---------------- */
+    .team-page>.container,
+    .footer>.container,
+    .customers-page>.container {
+        max-width: 1158px;
+    }
+
+    .team-page {
+        padding: 120px 0;
+    }
+
+    .team-flex {
+        gap: 24px;
+    }
+
+    .card {
+        width: calc((100% - 72px) / 4);
+    }
+
+    /* ------------------CUSTOMERS-------------------- */
+    .customers-page {
+        padding: 120px 0;
+    }
+
+    .company-list {
+        gap: 24px;
+    }
+}
+

@@ -32,6 +32,63 @@
                     <li><a href="tel:+110001111111" target="_blank" class="address-link link">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
+            <button type="button" class="burger-btn js-open-menu">
+                <svg class="burger-svg" width="32" height="22">
+                    <use href="./images/icons.svg#icon-burger-menu"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mob-menu js-menu-container is-open">
+            <button class="mob-close-btn js-close-menu" type="button" data-modal-close>
+                <svg class="close-icon" width="8" height="8">
+                    <use href="./images/close-icon.svg#icon-close-black"></use>
+                </svg>
+            </button>
+            <nav class="nav mob-nav-flex">
+                <ul class="list mob-nav-list-flex">
+                    <li><a href="./index.html" class="mob-nav-link link current">Studio</a></li>
+                    <li><a href="./portfolio.html" class="mob-nav-link link">Portfolio</a></li>
+                    <li><a href="" class="mob-nav-link link">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="mob-bottom">
+                <address class="address mob-address-flex">
+                    <ul class="list mob-address-flex-list">
+                        <li><a href="tel:+110001111111" target="_blank" class="tel link">+11 (000) 111-11-11</a></li>
+                        <li><a href="mailto:info@devstudio.com" target="_blank" class="mob-address-link link">info@devstudio.com</a></li>
+                    </ul>
+                </address>
+                <ul class="mob-soc-list list">
+                    <li class="mob-soc-item">
+                        <a href="" class="mob-soc-link link" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-icon" width="24" height="24">
+                                <use href="./images/symbol-social.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mob-soc-item">
+                        <a href="" class="mob-soc-link link" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-icon" width="24" height="24">
+                                <use href="./images/symbol-social.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mob-soc-item">
+                        <a href="" class="mob-soc-link link" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-icon" width="24" height="24">
+                                <use href="./images/symbol-social.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mob-soc-item">
+                        <a href="" class="mob-soc-link link" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-icon" width="24" height="24">
+                                <use href="./images/symbol-social.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -87,13 +144,13 @@
                     </div>
                 </section>
                 
-                <section class="occupation-page">
+        <section class="occupation-page">
             <div class="container">
                 <h2 class="occupation-heading">What are we doing</h2>
                 <ul class="list occup-list-flex">
-                    <li class="occup-img"><img src="./images/screen.jpg" alt="screen" width="360" height="300"></li>
-                    <li class="occup-img"><img src="./images/phone-and-chat.jpg" alt="screen" width="360" height="300"></li>
-                    <li class="occup-img"><img src="./images/notebook-and-phone.jpg" alt="screen" width="360" height="300"></li>
+                    <li class="occup-img"><img srcset="./images/screen-2x.jpg 2x" src="./images/screen.jpg" alt="screen" width="360" height="300"></li>
+                    <li class="occup-img"><img srcset="./images/phone-and-chat-2x.jpg 2x" src="./images/phone-and-chat.jpg" alt="screen" width="360" height="300"></li>
+                    <li class="occup-img"><img srcset="./images/notebook-and-phone-2x.jpg 2x" src="./images/notebook-and-phone.jpg" alt="screen" width="360" height="300"></li>
                 </ul>
             </div>
         </section>
@@ -103,7 +160,7 @@
                 <h2 class="team-heading">Our Team</h2>
                 <ul class="list team-flex">
                     <li class="card">
-                        <img src="./images/mark.jpg" alt="Mark Guerrero" width="264" height="260">
+                        <img srcset="./images/mark-2x.jpg 2x" src="./images/mark.jpg" alt="Mark Guerrero" width="264" height="260">
                         <div class="card-info">
                             <h3 class="card-name">Mark Guerrero</h3>
                             <p class="card-descr">Product Designer</p>
@@ -140,7 +197,7 @@
                         </div>
                     </li>
                     <li class="card">
-                        <img src="./images/tom.jpg" alt="Tom Ford" width="264" height="260">
+                        <img srcset="./images/tom-2x.jpg 2x" src="./images/tom.jpg" alt="Tom Ford" width="264" height="260">
                         <div class="card-info">
                             <h3 class="card-name">Tom Ford</h3>
                             <p class="card-descr">Frontend Developer</p>
@@ -177,7 +234,7 @@
                         </div>
                     </li>
                     <li class="card">
-                        <img src="./images/camilia.jpg" alt="Camila Garcia" width="264" height="260">
+                        <img srcset="./images/camilia-2x.jpg 2x" src="./images/camilia.jpg" alt="Camila Garcia" width="264" height="260">
                         <div class="card-info">
                             <h3 class="card-name">Camila Garcia</h3>
                             <p class="card-descr">Marketing</p>
@@ -214,7 +271,7 @@
                         </div>
                     </li>
                     <li class="card">
-                        <img src="./images/daniel.jpg" alt="Daniel Wilson" width="264" height="260">
+                        <img srcset="./images/daniel-2x.jpg 2x" src="./images/daniel.jpg" alt="Daniel Wilson" width="264" height="260">
                         <div class="card-info">
                             <h3 class="card-name">Daniel Wilson</h3>
                             <p class="card-descr">UI Designer</p>
@@ -252,9 +309,9 @@
                 </li>
             </ul>
         </div>
-    </section>
+        </section>
     
-    <section class="customers-page">
+     <section class="customers-page">
         <div class="container">
             <h2 class="customers-header">Customers</h2>
             <ul class="company-list list">
@@ -297,8 +354,8 @@
                     </ul>
                 </div>
             </section>
-            
         </main>
+        
         <footer class="footer">
             <div class="container footer-container">
                 <div class="footer-logo-p">
@@ -352,7 +409,7 @@
                 </form>
             </div>
         </div>    
-    </footer>
+    </footer> 
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -410,5 +467,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
