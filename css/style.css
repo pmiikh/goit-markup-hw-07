@@ -224,7 +224,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 40px;
+    padding: 80px 40px 40px;
 
     transform: translateX(0);
     transition: transform 250ms ease-in-out;
@@ -293,11 +293,17 @@ body{
     .tel{
         font-size: 25px;
     }
+
+    .mob-soc-list{
+        gap: 24px;
+    }
 }
 
 .mob-address-flex {}
 
-.mob-address-flex-list {}
+.mob-address-flex-list {
+    margin-bottom: 48px;
+}
 
 .mob-address-link {
     font-weight: 500;
@@ -308,14 +314,13 @@ body{
     color: var(--main-text-color);
 
     display: block;
-    margin-bottom: 48px;
+    
 }
 
 
 .mob-soc-list {
     display: flex;
-    justify-content: center;
-    gap: 24px;
+    gap: 56px;
 }
 
 .mob-soc-item {
@@ -710,17 +715,7 @@ body{
     gap: 72px;
 }
 
-.prop-item{
-    /* width: 100%; */
-    /* width: calc((100% - 72px) / 4); */
 
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-}
 
 .prop-icon-container{
     width: 396px;
@@ -750,9 +745,10 @@ body{
     letter-spacing: 0.02em;
     color: var(--main-color-dark);
 
-    max-width: 264px;
+    width: 264px;
 
     margin-bottom: 8px;
+    text-align: center;
 
 }
 
@@ -780,8 +776,7 @@ body{
 
 /*-----------------------Our team-----------------  */
 
-.team-page>.container,
-.customers-page>.container{
+.team-page>.container{
     max-width: 296px;
 }
 
@@ -909,13 +904,16 @@ body{
     justify-content: center;
     align-items: center;
     /* gap: 24px; */
-    gap: 16px;
+    gap: 72px 16px;
 
 }
 
 .company-item {
-    width: 168px;
+    /* width: 190px; */
     height: 88px;
+
+    width: calc((100% - 16px) / 2)
+    
 }
 
 .company-link {
@@ -930,6 +928,7 @@ body{
     color: var(--customer-color);
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 
@@ -1092,11 +1091,12 @@ body{
     align-items: center;
     letter-spacing: 0.04em;
     
-    /* padding-left: 16px; */
+    padding-left: 16px;
+
+}
+
+.footer-label{
     margin-bottom: 16px;
-
-
-
 }
 
 .footer-input::placeholder{
@@ -1131,6 +1131,8 @@ body{
     
     
     display: flex;
+
+    padding-left: 24px;
 
 }
 
@@ -1319,21 +1321,26 @@ margin: -1px;
 
     .address-flex {
         display: block;
-        margin-left: auto;
     }
     
+    .address-link{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
     
+        letter-spacing: 0.04em;
+    }
+    .address{
+        margin-left: auto;
+    }
+
     .address-flex-list{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 12px;
         
     }
     
-    .address{
-        
-        padding: 16px 0;
-    }
     
     .burger-btn{
         display: none;
@@ -1373,13 +1380,16 @@ margin: -1px;
     /* ---------------------PROPERITIES----------------------- */
     .prop-item{
         width: calc((100% - 24px) / 2);
-        justify-content: start;
     }
     .prop-flex{
         gap: 72px 24px;
     }
     .prop-icon-container{
         width: 356px;
+    }
+
+    .prop-heading{
+        text-align: none;
     }
 
 
@@ -1402,19 +1412,30 @@ margin: -1px;
         gap: 72px 24px;
     }
 
+    .company-item {
+        width: 168px;
+        height: 88px;
+
+        /* width: calc((100% - 24px) / 3); */
+    }
+
     /* -------------------FOOTER-------------------- */
     .footer-logo-soc-wrap {
         max-width: none;
         
         display: flex;
         gap: 24px;
+
+        margin-bottom: 72px;
     }
 
     .footer-logo-p{
+        margin-bottom: 0;
         align-items: start;
     }
 
     .footer-socials{
+        margin-bottom: 0;
         align-items: start;
     }
 
@@ -1429,6 +1450,10 @@ margin: -1px;
 
     .footer-input{
         width: 264px;
+    }
+
+    .footer-label {
+        margin-bottom: 0;
     }
     
 }
@@ -1446,6 +1471,11 @@ margin: -1px;
     }
 
     .address-link{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+
         padding: 24px 0;
     }
 
@@ -1482,7 +1512,6 @@ margin: -1px;
     }
     .prop-item {
         width: calc((100% - 72px) / 4);
-        justify-content: none;
     }
 
     .prop-flex {
@@ -1565,6 +1594,15 @@ margin: -1px;
     }
 
     /* -------------------FOOTER--------------- */
+    .footer-logo-p{
+        margin-bottom: 0;
+    }
+
+    .footer-socials{
+        margin-bottom: 0;
+    }
+
+    
     .footer-logo-soc-wrap{
         margin: 0;
         gap: 120px;
@@ -1575,5 +1613,6 @@ margin: -1px;
         display: flex;
        
     }
+
 }
 
