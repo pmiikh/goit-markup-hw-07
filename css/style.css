@@ -28,7 +28,7 @@ img {
 
 .container{
     /* width: 1158px; */
-    max-width: 426px;
+    max-width: 428px;
     padding: 0 16px;
     margin: 0 auto;
     /* outline: 2px solid red; */
@@ -280,24 +280,16 @@ body{
 }
 
 .tel{
-    color: var(--logo-web-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
-
+    
     margin-bottom: 40px;
     display: block;
+    color:var(--logo-web-color);
 }
 
-@media screen and (max-width: 427px){
-    .tel{
-        font-size: 25px;
-    }
 
-    .mob-soc-list{
-        gap: 24px;
-    }
-}
 
 .mob-address-flex {}
 
@@ -341,6 +333,27 @@ body{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
+}
+
+.tel-color{
+    color: var(--logo-web-color);
+}
+
+@media screen and (max-width: 427px) {
+    .tel {
+        font-size: 25px;
+
+        font-weight: 700;
+        line-height: 1.11;
+    
+        margin-bottom: 40px;
+        display: block;
+        color: var(--logo-web-color);
+    }
+
+    .mob-soc-list {
+        gap: 24px;
+    }
 }
 
 
@@ -635,14 +648,13 @@ body{
     justify-content: center;
     align-items: center;
 
-    margin-right: 12px;
+    margin-right: 8px;
     fill: transparent;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-privacy{
-    margin-left: 3px;
     color: var(--logo-web-color);
 }
 
@@ -745,7 +757,6 @@ body{
     letter-spacing: 0.02em;
     color: var(--main-color-dark);
 
-    width: 264px;
 
     margin-bottom: 8px;
     text-align: center;
@@ -954,6 +965,8 @@ body{
 .footer-logo-soc-wrap{
     max-width: 268px;
     margin: 0 auto;
+
+    margin-bottom: 72px;
 }
 
 
@@ -995,7 +1008,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 72px;
+    
 }
 
 .footer-soc-p {
@@ -1074,6 +1087,7 @@ body{
 
 }
 
+
 .footer-input {
     max-width: 396px;
     width: 100%;
@@ -1096,6 +1110,7 @@ body{
 }
 
 .footer-label{
+    display: block;
     margin-bottom: 16px;
 }
 
@@ -1133,6 +1148,8 @@ body{
     display: flex;
 
     padding-left: 24px;
+
+    margin: 0 auto;
 
 }
 
@@ -1389,7 +1406,7 @@ margin: -1px;
     }
 
     .prop-heading{
-        text-align: none;
+        text-align: left;
     }
 
 
@@ -1466,6 +1483,7 @@ margin: -1px;
 
     .address-flex-list {
         display: flex;
+        flex-direction: row;
         gap: 40px;
 
     }
@@ -1508,7 +1526,7 @@ margin: -1px;
 
     /* ---------------------PROPERITIES----------------------- */
     .prop-page{
-        padding: 120px 0;;
+        padding: 120px 0;
     }
     .prop-item {
         width: calc((100% - 72px) / 4);
@@ -1527,6 +1545,8 @@ margin: -1px;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
+
+        
     }
 
     .prop-p{
