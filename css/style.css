@@ -1473,6 +1473,9 @@ margin: -1px;
         margin-bottom: 0;
     }
     
+    .btn-footer-form{
+        margin: 0;
+    }
 }
 
 @media screen  and (min-width: 1158px){
